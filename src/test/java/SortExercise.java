@@ -3,7 +3,8 @@ public class SortExercise {
     public static void main(String[] args) {
         int[] sortArray = new int[] {6, 3, 1, 2, 5, 0};
 //        bubble(sortArray);
-        insert(sortArray);
+//        insert(sortArray);
+        select(sortArray);
         for (int i = 0; i < sortArray.length; i++) {
             System.out.println(sortArray[i]);
         }
@@ -62,10 +63,30 @@ public class SortExercise {
 
     /**
      * 选择排序
+     * 时间复杂度O(n^2)  不稳定排序
+     * 稳定：相同原始，排序前后位置保持不变
      * @param sortArray
      */
     public static void select(int[] sortArray){
+        int size = sortArray.length;
+        if(size < 2) return;
 
+        for(int i = 0; i < size; i++){
+            //找到未排序区域最小值及下标
+            int minVal = sortArray[0];
+            int min = i;
+            for(int j = i+1; j < size; j++){
+                //找到最小的值
+                if(sortArray[j] < minVal){
+                    minVal = sortArray[j];
+                    min = j;
+                }
+            }
+            //交换
+            int temp = sortArray[min];
+            sortArray[min] = sortArray[i];
+            sortArray[i] = temp;
+        }
     }
 
 }
