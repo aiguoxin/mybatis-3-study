@@ -1,13 +1,19 @@
+import org.assertj.core.util.Lists;
+
+import java.util.Collections;
+import java.util.List;
+
 /** 2020/7/1 下午7:22 aiguoxin 说明: 各种排序算法 */
 public class SortExercise {
     public static void main(String[] args) {
         int[] sortArray = new int[] {6, 3, 1, 2, 5, 0};
 //        bubble(sortArray);
 //        insert(sortArray);
-        select(sortArray);
-        for (int i = 0; i < sortArray.length; i++) {
-            System.out.println(sortArray[i]);
-        }
+//        select(sortArray);
+          javaDefaultSort();
+//        for (int i = 0; i < sortArray.length; i++) {
+//            System.out.println(sortArray[i]);
+//        }
     }
 
     /**
@@ -87,6 +93,16 @@ public class SortExercise {
             sortArray[min] = sortArray[i];
             sortArray[i] = temp;
         }
+    }
+
+    /**
+     * java底层排序算法
+     * Collections使用的是Arrays.sort
+     */
+    public static void javaDefaultSort(){
+        List list =  Lists.newArrayList(1,3,2,3,3,5);
+        Collections.sort(list);
+        list.stream().forEach(e->System.out.println(e));
     }
 
 }
