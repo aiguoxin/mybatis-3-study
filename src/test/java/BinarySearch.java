@@ -8,9 +8,13 @@ import java.util.List;
  * 说明: 二分查找，针对有序数组
  */
 public class BinarySearch {
+    static int pos = 0;
     public static void main(String[] args) {
-        int[] searchArray = {0,1,2,3,4,5};
-        stackMethod(searchArray,4);
+        int[] searchArray = {0,1,2,2,3,4,5};
+//        stackMethod(searchArray,4);
+//        pos = findFirst(searchArray,0, searchArray.length -1,4);
+        pos = findLast(searchArray,0, searchArray.length -1,2);
+        System.out.println("the first pos is="+pos);
     }
 
     /**
@@ -39,7 +43,45 @@ public class BinarySearch {
         return useStack(sortArray,low,high,findVal);
     }
 
-   //todo 非递归实现及查找大于某个数的第一个数的位置
+   // 非递归实现及查找大于某个数的第一个数的位置
+   private static int findFirst(int[] sortArray,int low, int high, int findVal){
+        if(low >= high){
+            return low;
+        }
+        int middle = low + ((high - low) >> 1);
+       if(findVal > sortArray[middle]){
+           low = middle + 1;
+       }else if(findVal < sortArray[middle]){
+           high = middle - 1;
+       }else{
+           if (sortArray[middle - 1] != findVal) {
+               return middle;
+           }else{
+               high = middle - 1;
+           }
+       }
+       return findFirst(sortArray,low,high,findVal);
+   }
+
+    // 非递归实现及查找大于某个数的最后一个数的位置
+    private static int findLast(int[] sortArray,int low, int high, int findVal){
+        if(low >= high){
+            return low;
+        }
+        int middle = low + ((high - low) >> 1);
+        if(findVal > sortArray[middle]){
+            low = middle + 1;
+        }else if(findVal < sortArray[middle]){
+            high = middle - 1;
+        }else{
+            if (sortArray[middle + 1] != findVal) {
+                return middle;
+            }else{
+                low = middle + 1;
+            }
+        }
+        return findLast(sortArray,low,high,findVal);
+    }
 
    public static void sysBinary(Integer[] sortArray,Integer findVal){
         List<Integer> list = new LinkedList<>();
