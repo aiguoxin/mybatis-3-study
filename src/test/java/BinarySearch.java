@@ -12,9 +12,42 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] searchArray = {0,1,2,2,3,4,5};
 //        stackMethod(searchArray,4);
+        /**
+         * 查找第一个元素位置，如果有重复元素
+         */
 //        pos = findFirst(searchArray,0, searchArray.length -1,4);
-        pos = findLast(searchArray,0, searchArray.length -1,2);
+        /**
+         * 查找最后一个元素位置，如果有重复元素
+         */
+//        pos = findLast(searchArray,0, searchArray.length -1,2);
+        /**
+         * 查找第一个小于等于的元素位置
+         */
+        pos = findFirstLe(searchArray,0, searchArray.length -1,3);
         System.out.println("the first pos is="+pos);
+    }
+
+    /**
+     * 查找第一个小于等于的元素位置
+     * @param searchArray
+     * @param low
+     * @param high
+     * @param findVal
+     * @return
+     */
+    private static int findFirstLe(int[] searchArray, int low, int high, int findVal) {
+        if(low >= high)return low;
+        int mid = low + ((high-low) >>> 1);
+        if(findVal > searchArray[mid]){
+            if(mid == 0 || searchArray[mid+1] >= findVal){
+                return mid;
+            }else {
+                low = mid + 1;
+            }
+        }else{
+            high = mid -1;
+        }
+        return findFirstLe(searchArray, low, high, findVal);
     }
 
     /**
