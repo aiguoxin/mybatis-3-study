@@ -10,11 +10,61 @@ public class SortExercise {
 //        bubble(sortArray);
 //        insert(sortArray);
 //        select(sortArray);
-          javaDefaultSort();
-//        for (int i = 0; i < sortArray.length; i++) {
-//            System.out.println(sortArray[i]);
-//        }
+//          javaDefaultSort();
+        mergeSort(sortArray);
+        for (int i = 0; i < sortArray.length; i++) {
+            System.out.println(sortArray[i]);
+        }
     }
+
+    /**
+     * 归并排序
+     * @param sortArray
+     */
+    public static void mergeSort(int[] sortArray){
+        mergeSortChild(sortArray,0,sortArray.length-1);
+    }
+
+    private static void mergeSortChild(int[] sortArray, int start, int end) {
+        if(start >= end)return;
+        int q = start + ((end-start)>>1);
+        mergeSortChild(sortArray, start, q);
+        mergeSortChild(sortArray, q+1, end);
+        mergeResult(sortArray,start,q,end);
+    }
+
+
+    //todo 使用哨兵优化，最后一个元素增加一个最大value
+    private static void mergeResult(int[] sortArray, int start, int q, int end) {
+        int i = start;
+        int j = q +1;
+        int k = 0;
+        int[] tmp = new int[end - start +1];
+
+        while(i<=q && j <= end){
+            if(sortArray[i] <= sortArray[j]){
+                tmp[k++] = sortArray[i++];
+            }else{
+                tmp[k++] = sortArray[j++];
+            }
+        }
+
+        int leftS = i;
+        int leftE = q;
+        if(j <= end){
+            leftS = j;
+            leftE = end;
+        }
+
+        while(leftS <= leftE){
+            tmp[k++] = sortArray[leftS++];
+        }
+
+        for(i = 0; i <= end-start; ++ i){
+            sortArray[start+i] = tmp[i];
+        }
+    }
+
 
     /**
      * 冒泡排序 稳定、时间复杂度O(n^2)
