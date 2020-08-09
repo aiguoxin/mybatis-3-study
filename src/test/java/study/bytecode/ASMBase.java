@@ -13,16 +13,16 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-import org.apache.commons.lang3.StringUtils;
-
-/** 2020/7/8 上午9:58 aiguoxin 说明: */
-public class Test {
-    public static void main(String[] args) {
-        String idCard = "130527*********235";
-        if (StringUtils.contains(idCard, "******")) {
-            System.out.println("contain");
-        }else{
-            System.out.println("no contain");
-        }
+package study.bytecode;
+/**
+ * 2020/8/8 下午3:35
+ * aiguoxin
+ * 说明:
+ */
+public class ASMBase {
+    public void process(){
+//        System.out.println("start");
+        System.out.println("process");
+//        System.out.println("end");
     }
 }

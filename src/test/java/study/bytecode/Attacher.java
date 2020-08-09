@@ -13,16 +13,18 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-import org.apache.commons.lang3.StringUtils;
+package study.bytecode;
 
-/** 2020/7/8 上午9:58 aiguoxin 说明: */
-public class Test {
-    public static void main(String[] args) {
-        String idCard = "130527*********235";
-        if (StringUtils.contains(idCard, "******")) {
-            System.out.println("contain");
-        }else{
-            System.out.println("no contain");
-        }
+import com.sun.tools.attach.VirtualMachine;
+
+/**
+ * 2020/8/9 上午10:55
+ * aiguoxin
+ * 说明:
+ */
+public class Attacher {
+    public static void main(String[] args) throws Exception{
+        VirtualMachine vm = VirtualMachine.attach("27923");
+        vm.loadAgent("/Volumes/work/qiyi/git/renzheng-biz-support/target/renzheng-biz-support-1.0.0-SNAPSHOT.jar");
     }
 }
