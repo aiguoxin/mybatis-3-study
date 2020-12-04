@@ -5,7 +5,7 @@ public class ArrayExercise {
         int[] a = {
             1, 1, 1, 1, 1, 1, 2, 3, 3,
         };
-        int length = removeDuplicatesRetainMost3(a);
+        int length =  rmVal(a,1);
         System.out.println("length=" + length);
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
@@ -35,8 +35,8 @@ public class ArrayExercise {
     }
 
     /**
-     * 移除重复元素，最多保留3个，如：[1,1,1,1,2,2,3]->[1,1,1,2,2,3]
-     * 通用解法：比较第一个元素和前一个元素，是否和当前元素相等
+     * 移除重复元素，最多保留3个，如：[1,1,1,1,2,2,3]->[1,1,1,2,2,3] 通用解法：比较第一个元素和前一个元素，是否和当前元素相等
+     *
      * @return
      */
     public static int removeDuplicatesRetainMost3(int[] A) {
@@ -44,8 +44,8 @@ public class ArrayExercise {
             return A.length;
         }
 
-        int i = 2; //previous
-        int j = 3; //current
+        int i = 2; // previous
+        int j = 3; // current
         while (j < A.length) {
             if (A[i] == A[j] || A[i - 2] == A[j]) {
                 j++;
@@ -57,5 +57,24 @@ public class ArrayExercise {
         }
 
         return i + 1;
+    }
+
+    /**
+     * 移除指定元素，返回新长度
+     * @param A
+     * @param value
+     * @return
+     */
+    public static int rmVal(int[] A, int value) {
+        int i = 0;
+        int j = 0;
+        while(j < A.length){
+            if(A[j] != value){
+                A[i] = A[j];
+                i++;
+            }
+            j++;
+        }
+        return i;
     }
 }
