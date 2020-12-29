@@ -1,5 +1,8 @@
 package simple;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 2020/12/29 下午10:15
  * aiguoxin
@@ -7,8 +10,8 @@ package simple;
  */
 public class Solution {
     public static void main(String[] args) {
-        int x = 10;
-        System.out.println("x="+x+",result="+isPalindrome(x));
+        String x = "MCMXCIV";
+        System.out.println("x="+x+",result="+romanToInt(x));
     }
 
     /**
@@ -30,5 +33,40 @@ public class Solution {
             }
         }
         return true;
+    }
+
+    /**
+     * 罗马数字转整数
+     * https://leetcode-cn.com/problems/roman-to-integer/solution/yong-shi-9993nei-cun-9873jian-dan-jie-fa-by-donesp/
+     * @param s
+     * @return
+     */
+    public static int romanToInt(String s) {
+        //可以使用switch处理
+        Map<Character,Integer> valMap = new HashMap<>(8);
+        valMap.put('I',1);
+        valMap.put('V',5);
+        valMap.put('X',10);
+        valMap.put('L',50);
+        valMap.put('C',100);
+        valMap.put('D',500);
+        valMap.put('M',1000);
+
+        int result = 0;
+        char[] sChar = s.toCharArray();
+        int preVal = valMap.get(sChar[0]);
+
+        for (int i = 1; i < sChar.length; i++) {
+            int current = valMap.get(sChar[i]);
+            if(preVal < current){
+                result -= preVal;
+            }else {
+                result += preVal;
+            }
+            preVal = current;
+        }
+        result += preVal;
+
+        return result;
     }
 }
