@@ -13,7 +13,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package leetcode.editor.cn;
+package leetcode;
 //给定一个二叉树，找到最长的路径，这个路径中的每个节点具有相同值。 这条路径可以经过也可以不经过根节点。
 //
 // 注意：两个节点之间的路径长度由它们之间的边数表示。 
