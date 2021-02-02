@@ -34,7 +34,7 @@
           eliminates almost
           all of the JDBC code and manual setting of
           parameters and retrieval
-          of results. MyBatis can use simple XML or
+          of results. MyBatis can use leetcode.simple XML or
           Annotations for
           configuration and map primitives, Map interfaces and
           Java POJOs
@@ -50,7 +50,7 @@
         </p>
         <p>
           Sources of this manual are available in xdoc format at
-          <a href="https://github.com/mybatis/mybatis-3/tree/master/src/site">project's Git </a>
+          <a href="https://github.com/mybatis/mybatis-3/leetcode.tree/master/src/site">project's Git </a>
           Fork the repository, update them and send a pull request.
         </p>
         <p>

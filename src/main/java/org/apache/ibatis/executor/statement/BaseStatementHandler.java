@@ -90,7 +90,7 @@ public abstract class BaseStatementHandler implements StatementHandler {
     ErrorContext.instance().sql(boundSql.getSql());
     Statement statement = null;
     try {
-      //通过不同的子类实例化不同的Statement，分为三类：simple(statment)、prepare(prepareStatement)、callable(CallableStatementHandler)
+      //通过不同的子类实例化不同的Statement，分为三类：leetcode.simple(statment)、prepare(prepareStatement)、callable(CallableStatementHandler)
       statement = instantiateStatement(connection);
       //设置超时时间
       setStatementTimeout(statement, transactionTimeout);

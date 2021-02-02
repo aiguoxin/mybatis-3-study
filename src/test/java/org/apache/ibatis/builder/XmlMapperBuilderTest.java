@@ -184,7 +184,7 @@ public class XmlMapperBuilderTest {
     }
   }
 
-//  @Test
+//  @leetcode.Test
 //  public void shouldNotLoadTheSameNamespaceFromTwoResourcesWithDifferentNames() throws Exception {
 //    Configuration configuration = new Configuration();
 //    String resource = "org/apache/ibatis/builder/AuthorMapper.xml";

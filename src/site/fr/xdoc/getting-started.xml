@@ -38,13 +38,13 @@
 
     <subsection name="Créer une SqlSessionFactory à partir d'un fichier XML">
       <p>
-        Créer une instance de SqlSessionFactory à partir d'un fichier XML est
-        très simple. Il est recommandé d'utiliser un fichier présent dans le
-        classpath, mais on peut utiliser n'importe quelle instance
-        d'InputStream, y compris à partir d'un chemin vers un fichier ou d'une
-        URL de type file://. MyBatis contient une classe utilitaire, Resources,
-        qui contient plusieurs méthodes facilitant le chargement de ressources
-        du classpath ou d'ailleurs.
+          Créer une instance de SqlSessionFactory à partir d'un fichier XML est
+          très leetcode.simple. Il est recommandé d'utiliser un fichier présent dans le
+          classpath, mais on peut utiliser n'importe quelle instance
+          d'InputStream, y compris à partir d'un chemin vers un fichier ou d'une
+          URL de type file://. MyBatis contient une classe utilitaire, Resources,
+          qui contient plusieurs méthodes facilitant le chargement de ressources
+          du classpath ou d'ailleurs.
       </p>
       <source><![CDATA[
 String resource = "org/mybatis/example/mybatis-config.xml";
@@ -56,7 +56,7 @@ SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(input
         base de données, ainsi qu'un TransactionManager pour contrôler les
         transactions et déterminer leur périmètre. Le détail complet du fichier
         de configuration XML est décrit plus tard dans le document, mais voici
-        un exemple simple:
+        un exemple leetcode.simple:
       </p>
       <source><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
@@ -176,7 +176,7 @@ try {
   </select>
 </mapper>]]></source>
       <p>
-        Cela peut paraître beaucoup d'overhead pour un exemple aussi simple,
+        Cela peut paraître beaucoup d'overhead pour un exemple aussi leetcode.simple,
         mais c'est en fait très léger. On peut définir autant de requêtes dans
         un même mapper XML, si bien que les entêtes XML paraissent
         insignifiants. Le reste du fichier parle de lui-même. On définit un nom
@@ -213,7 +213,7 @@ Blog blog = mapper.selectBlog(101);]]></source>
       <p>
         Les <strong>Namespaces</strong> étaient optionnels dans les précédentes
         versions de MyBatis, ce qui n'aidait pas en plus d'être déroutant. Ils
-        sont maintenant obligatoires et ont un but au-delà de la simple
+        sont maintenant obligatoires et ont un but au-delà de la leetcode.simple
         isolation des requêtes (noms canoniques).
       </p>
       <p>
@@ -221,7 +221,7 @@ Blog blog = mapper.selectBlog(101);]]></source>
         interfaces, et même si vous ne pensez pas les utiliser aujourd'hui, il
         est vivement recommandé de suivre ces pratiques. En utilisant déclarant
         un namespace, et en utilisant l'interface Java correspondante, à long
-        terme MyBatis devient plus simple à utiliser et cela rend votre code
+        terme MyBatis devient plus leetcode.simple à utiliser et cela rend votre code
         plus fiable.
       </p>
       <p>
@@ -308,7 +308,7 @@ public interface BlogMapper {
           disposer d'une instance ou de la recréer. La bonne pratique est de ne
           pas créer de multiples instances pendant l'exécution d'une application.
           Par conséquent, la portée la plus adaptée est celle de l'application.
-          Cela peut être fait de différentes façons. La plus simple est
+          Cela peut être fait de différentes façons. La plus leetcode.simple est
           d'utiliser le pattern du Singleton ou du Static Singleton.
         </p>
       <h4>SqlSession</h4>
@@ -351,7 +351,7 @@ try {
           explicitement besoin d'être fermés. Même s'il n'est pas gênant de les
           conserver pendant toute une requête (e.g. HTTP), à l'image de leur
           SqlSession, vous prenez le risque d'être débordé face à la
-          consommation de ressources induite. Le plus simple, c'est de limiter
+          consommation de ressources induite. Le plus leetcode.simple, c'est de limiter
           la portée d'un mapper à une méthode. Voici un exemple de mise en
           pratique (la portée du mapper est le bloc try):
         </p>

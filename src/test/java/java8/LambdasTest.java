@@ -26,7 +26,7 @@ public class LambdasTest {
     @Filter("filter2")
     public interface Filterable {}
 
-//    @Test
+//    @leetcode.Test
     public void testPrint() {
         Arrays.asList("a", "b", "d")
                 .forEach(
@@ -41,7 +41,7 @@ public class LambdasTest {
     }
 
     //    Scheduled注解就是repeated，方便多次执行不同时间任务
-//    @Test
+//    @leetcode.Test
     public void testRepeatedAno() {
         for (Filter annotation : Filterable.class.getAnnotationsByType(Filter.class)) {
             System.out.println(annotation.value());

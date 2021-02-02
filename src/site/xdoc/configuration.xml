@@ -1630,13 +1630,13 @@ public class ExampleObjectFactory extends DefaultObjectFactory {
   <property name="someProperty" value="100"/>
 </objectFactory>]]></source>
         <p>
-          The ObjectFactory interface is very simple. It contains two create
-          methods, one to deal with the default constructor, and the other to
-          deal with parameterized constructors. Finally, the setProperties
-          method can be used to configure the ObjectFactory. Properties
-          defined within the body of the objectFactory element will be passed
-          to the setProperties method after initialization of your
-          ObjectFactory instance.
+            The ObjectFactory interface is very leetcode.simple. It contains two create
+            methods, one to deal with the default constructor, and the other to
+            deal with parameterized constructors. Finally, the setProperties
+            method can be used to configure the ObjectFactory. Properties
+            defined within the body of the objectFactory element will be passed
+            to the setProperties method after initialization of your
+            ObjectFactory instance.
         </p>
 
       </subsection>
@@ -1680,7 +1680,7 @@ public class ExampleObjectFactory extends DefaultObjectFactory {
           plug-ins with caution.
         </p>
         <p>
-          Using plug-ins is pretty simple given the power they provide.
+          Using plug-ins is pretty leetcode.simple given the power they provide.
           Simply
           implement the Interceptor interface, being sure to specify the
           signatures you want to intercept.
@@ -1734,7 +1734,7 @@ public class ExamplePlugin implements Interceptor {
           you to
           apply your SQL Maps to multiple databases for any number of
           reasons. For example, you might have a different configuration for
-          your Development, Test and Production environments. Or, you may
+          your Development, leetcode.Test and Production environments. Or, you may
           have
           multiple production databases that share the same schema, and
           you’d
@@ -1871,7 +1871,7 @@ SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(reader, propert
           Any properties configured in the XML will be passed to the
           setProperties() method after instantiation. Your implementation
           would also need to create a Transaction implementation, which is
-          also a very simple interface:
+          also a very leetcode.simple interface:
         </p>
         <source><![CDATA[public interface Transaction {
   Connection getConnection() throws SQLException;
@@ -1904,7 +1904,7 @@ SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(reader, propert
           <strong>UNPOOLED</strong>
           – This implementation of DataSource simply opens and closes a
           connection each time it is requested. While it’s a bit slower, this
-          is a good choice for simple applications that do not require the
+          is a good choice for leetcode.simple applications that do not require the
           performance of immediately available connections. Different
           databases are also different in this performance area, so for some
           it may be less important to pool and this configuration will be

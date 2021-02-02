@@ -75,7 +75,7 @@
       </p>
 
       <subsection name="select">
-        <p>El select statement es uno de los elementos que más utilizarás en MyBatis. No es demasiado útil almacenar datos en la base de datos si no puedes leerlos, de hecho las aplicaciones suelen leer bastantes más datos de los que modifican. Por cada insert, update o delete posiblemente haya varias selects. Este es uno de los principios básicos de MyBatis y la razón por la que se ha puesto tanto esfuerzo en las consultas y el mapeo de resultados. El select statement es bastante simple para los casos simples. Por ejemplo:
+        <p>El select statement es uno de los elementos que más utilizarás en MyBatis. No es demasiado útil almacenar datos en la base de datos si no puedes leerlos, de hecho las aplicaciones suelen leer bastantes más datos de los que modifican. Por cada insert, update o delete posiblemente haya varias selects. Este es uno de los principios básicos de MyBatis y la razón por la que se ha puesto tanto esfuerzo en las consultas y el mapeo de resultados. El select statement es bastante leetcode.simple para los casos simples. Por ejemplo:
         </p>
 
         <source><![CDATA[<select id="selectPerson" parameterType="int" resultType="hashmap">
@@ -348,7 +348,7 @@ Por ejemplo, si la columna id de la tabla Author del ejemplo siguiente fuera aut
         <p>MyBatis puede tratar las claves autogeneradas de otra forma para el caso de las bases de datos que no soportan columnas autogeneradas, o porque su driver JDBC no haya incluido aun dicho soporte.
         </p>
 
-        <p>A continuación se muestra un ejemplo muy simple que genera un id aleatorio (algo que posiblemente nunca harás pero que demuestra la flexibilidad de MyBatis y cómo MyBatis ignora la forma en la que se consigue la clave):
+        <p>A continuación se muestra un ejemplo muy leetcode.simple que genera un id aleatorio (algo que posiblemente nunca harás pero que demuestra la flexibilidad de MyBatis y cómo MyBatis ignora la forma en la que se consigue la clave):
         </p>
         <source><![CDATA[<insert id="insertAuthor">
   <selectKey keyProperty="id" resultType="int" order="BEFORE">
@@ -390,7 +390,7 @@ Por ejemplo, si la columna id de la tabla Author del ejemplo siguiente fuera aut
             </tr>
             <tr>
               <td><code>resultType</code></td>
-              <td>El tipo de retorno. MyBatis puede adivinarlo pero no está de más añadirlo para asegurarse. MyBatis permite usar cualquier tipo simple, incluyendo Strings.
+              <td>El tipo de retorno. MyBatis puede adivinarlo pero no está de más añadirlo para asegurarse. MyBatis permite usar cualquier tipo leetcode.simple, incluyendo Strings.
               </td>
             </tr>
             <tr>
@@ -458,7 +458,7 @@ Por ejemplo, si la columna id de la tabla Author del ejemplo siguiente fuera aut
   where id = #{id}
 </select>]]></source>
 
-        <p>El ejemplo anterior muestra un mapeo muy simple de parámetro con nombre. El atributo parameterType se ha informado a “int”, por lo tanto el nombre del parámetro puede ser cualquiera. Los tipos primitivos y los tipos de datos simples como Integer o String no tienen propiedades relevantes y por tanto el parámetro será reemplazado por su valor. Sin embargo, si pasas un objeto complejo, entonces el comportamiento es distinto. Por ejemplo:
+        <p>El ejemplo anterior muestra un mapeo muy leetcode.simple de parámetro con nombre. El atributo parameterType se ha informado a “int”, por lo tanto el nombre del parámetro puede ser cualquiera. Los tipos primitivos y los tipos de datos simples como Integer o String no tienen propiedades relevantes y por tanto el parámetro será reemplazado por su valor. Sin embargo, si pasas un objeto complejo, entonces el comportamiento es distinto. Por ejemplo:
         </p>
 
         <source><![CDATA[<insert id="insertUser" parameterType="User">
@@ -796,7 +796,7 @@ public class User {
 <result property="subject" column="post_subject"/>]]></source>
 
         <p>
-          Estos son los ResultMaps más sencillos. Ambos id, y result mapean una columna con una propiedad o campo de un tipo de dato simple (String, int, double, Date, etc.).  
+          Estos son los ResultMaps más sencillos. Ambos id, y result mapean una columna con una propiedad o campo de un tipo de dato leetcode.simple (String, int, double, Date, etc.).
         </p>
 
         <p>
@@ -1017,7 +1017,7 @@ public class User {
           <tbody>
             <tr>
               <td><code>property</code></td>
-              <td>El campo o propiedad a la que se debe mapear la columna. Si existe una propiedad JavaBean igual al nombre dado, se usará. En caso contrario, MyBatis buscará un campo con el nombre indicado. En ambos casos puedes usar navegación compleja usando la notación habitual con puntos. Por ejemplo puedes mapear algo simple como: “username”, o algo más complejo como:  “address.street.number”.
+              <td>El campo o propiedad a la que se debe mapear la columna. Si existe una propiedad JavaBean igual al nombre dado, se usará. En caso contrario, MyBatis buscará un campo con el nombre indicado. En ambos casos puedes usar navegación compleja usando la notación habitual con puntos. Por ejemplo puedes mapear algo leetcode.simple como: “username”, o algo más complejo como:  “address.street.number”.
               </td>
             </tr>
             <tr>
@@ -1090,7 +1090,7 @@ public class User {
         <p>Todas las demás propiedades se cargarán automáticamente asumiendo que los nombres de propiedad y de columna coinciden.
         </p>
 
-        <p>Aunque este enfoque es simple, puede no tener un buen rendimiento con gran cantidad de datos. Este problema es conocido como “El problema de las N+1 Selects”. En resumidas cuentas, el problema de N+1 selects está causado por esto:
+        <p>Aunque este enfoque es leetcode.simple, puede no tener un buen rendimiento con gran cantidad de datos. Este problema es conocido como “El problema de las N+1 Selects”. En resumidas cuentas, el problema de N+1 selects está causado por esto:
         </p>
 
         <ul>
@@ -1148,7 +1148,7 @@ public class User {
           </tbody>
         </table>
 
-        <p>Previamente has visto un ejemplo muy complejo de asociaciones anidadas. Lo que se muestra a continuación es un ejemplo más simple que muestra cómo funciona esta característica. En lugar de ejecutar un statement separado, vamos a hacer una JOIN de las tablas Blog y Author de la siguiente forma:
+        <p>Previamente has visto un ejemplo muy complejo de asociaciones anidadas. Lo que se muestra a continuación es un ejemplo más leetcode.simple que muestra cómo funciona esta característica. En lugar de ejecutar un statement separado, vamos a hacer una JOIN de las tablas Blog y Author de la siguiente forma:
         </p>
 
         <source><![CDATA[<select id="selectBlog" resultMap="blogResult">
@@ -1398,7 +1398,7 @@ SELECT * FROM AUTHOR WHERE ID = #{id}]]></source>
   where B.id = #{id}
 </select>]]></source>
 
-        <p>Nuevamente hemos hecho una JOIN de las tablas Blog y Post, y hemos tenido cuidado de asegurarnos que las columnas obtenidas tienen un alias adecuado. Ahora, mapear un Blog y colección de Post es tan simple como:
+        <p>Nuevamente hemos hecho una JOIN de las tablas Blog y Post, y hemos tenido cuidado de asegurarnos que las columnas obtenidas tienen un alias adecuado. Ahora, mapear un Blog y colección de Post es tan leetcode.simple como:
         </p>
 
         <source><![CDATA[<resultMap id="blogResult" type="Blog">
@@ -1500,7 +1500,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
   <result property="doorCount" column="door_count" />
 </resultMap>]]></source>
 
-        <p>Entonces solo la propiedad doorCount se cargará. Esto se hace así para permitir grupos de discriminadores completamente independientes, incluso que no tengan ninguna relación con el ResultMap padre. En este caso sabemos que hay relación entre coches y vehículos, dado que un coche es-un vehículo. Por tanto queremos que el resto de propiedades se carguen también, así que con un simple cambio en el ResultMap habremos terminado.
+        <p>Entonces solo la propiedad doorCount se cargará. Esto se hace así para permitir grupos de discriminadores completamente independientes, incluso que no tengan ninguna relación con el ResultMap padre. En este caso sabemos que hay relación entre coches y vehículos, dado que un coche es-un vehículo. Por tanto queremos que el resto de propiedades se carguen también, así que con un leetcode.simple cambio en el ResultMap habremos terminado.
         </p>
 
         <source><![CDATA[<resultMap id="carResult" type="Car" extends="vehicleResult">
@@ -1718,7 +1718,9 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
 
         <source><![CDATA[<cache type="com.domain.something.MyCustomCache"/>]]></source>
 
-        <p>Este ejemplo muestra cómo usar una caché personalizada. La clase especificada en el atributo type debe implementar el interfaz org.mybatis.cache.Cache y proporcionar un constructor que recibe como parámetro un String id. Este es uno de los interfaces más complejos de MyBatis pero su funcionalidad es simple.
+        <p>Este ejemplo muestra cómo usar una caché personalizada. La clase especificada en el atributo type debe
+            implementar el interfaz org.mybatis.cache.Cache y proporcionar un constructor que recibe como parámetro un
+            String id. Este es uno de los interfaces más complejos de MyBatis pero su funcionalidad es leetcode.simple.
         </p>
 
         <source><![CDATA[public interface Cache {
@@ -1739,7 +1741,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
 </cache>]]></source>
 
         <p>
-          Puedes utilizar propiedades JavaBean de cualquier tipo simple y MyBatis hará la conversión.
+          Puedes utilizar propiedades JavaBean de cualquier tipo leetcode.simple y MyBatis hará la conversión.
           And you can specify a placeholder(e.g. <code>${cache.file}</code>) to replace value defined at <a href="configuration.html#properties">configuration properties</a>.
         </p>
 

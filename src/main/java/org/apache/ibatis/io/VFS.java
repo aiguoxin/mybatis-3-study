@@ -28,7 +28,7 @@ import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 
 /**
- * Provides a very simple API for accessing resources within an application server.
+ * Provides a very leetcode.simple API for accessing resources within an application server.
  * 
  * @author Ben Gunter
  */

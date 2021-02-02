@@ -27,10 +27,10 @@
   <body>
     <section name="Mapper XML Files">
       <p>
-        The true power of MyBatis is in the Mapped Statements. This is where the magic happens.
-        For all of their power, the Mapper XML files are relatively simple. Certainly if you were
-        to compare them to the equivalent JDBC code, you would immediately see a savings of 95% of the code.
-        MyBatis was built to focus on the SQL, and does its best to stay out of your way.
+          The true power of MyBatis is in the Mapped Statements. This is where the magic happens.
+          For all of their power, the Mapper XML files are relatively leetcode.simple. Certainly if you were
+          to compare them to the equivalent JDBC code, you would immediately see a savings of 95% of the code.
+          MyBatis was built to focus on the SQL, and does its best to stay out of your way.
       </p>
       <p>The Mapper XML files have only a few first class elements (in the order that they should be defined):
       </p>
@@ -87,7 +87,7 @@
           applications query far more than they modify the data. For every insert, update or delete,
           there are probably many selects. This is one of the founding principles of MyBatis, and is the
           reason so much focus and effort was placed on querying and result mapping. The select element is
-          quite simple for simple cases. For example:
+          quite leetcode.simple for leetcode.simple cases. For example:
         </p>
 
         <source><![CDATA[<select id="selectPerson" parameterType="int" resultType="hashmap">
@@ -415,7 +415,7 @@ ps.setInt(1,id);]]></source>
         </p>
 
         <p>
-          Here's a simple (silly) example that would generate a random ID (something you'd likely never do,
+          Here's a leetcode.simple (silly) example that would generate a random ID (something you'd likely never do,
           but this demonstrates the flexibility and how MyBatis really doesn't mind):
         </p>
         <source><![CDATA[<insert id="insertAuthor">
@@ -468,7 +468,7 @@ ps.setInt(1,id);]]></source>
               <td><code>resultType</code></td>
               <td>
                 The type of the result. MyBatis can usually figure this out, but it doesn't hurt to
-                add it to be sure. MyBatis allows any simple type to be used as the key,
+                add it to be sure. MyBatis allows any leetcode.simple type to be used as the key,
                 including Strings.  If you are expecting multiple generated columns, then
                 you can use an Object that contains the expected properties, or a Map.
               </td>
@@ -539,8 +539,8 @@ ps.setInt(1,id);]]></source>
 
       <subsection name="Parameters">
         <p>
-          In all of the past statements, you've seen examples of simple parameters. Parameters are very
-          powerful elements in MyBatis. For simple situations, probably 90% of the cases, there's not much
+          In all of the past statements, you've seen examples of leetcode.simple parameters. Parameters are very
+          powerful elements in MyBatis. For leetcode.simple situations, probably 90% of the cases, there's not much
           to them, for example:
         </p>
 
@@ -551,8 +551,8 @@ ps.setInt(1,id);]]></source>
 </select>]]></source>
 
         <p>
-          The example above demonstrates a very simple named parameter mapping. The parameterType is set to
-          <code>int</code>, so therefore the parameter could be named anything. Primitive or simple data types such as
+          The example above demonstrates a very leetcode.simple named parameter mapping. The parameterType is set to
+          <code>int</code>, so therefore the parameter could be named anything. Primitive or leetcode.simple data types such as
           <code>Integer</code> and <code>String</code> have no relevant properties, and thus will replace the full value of the
           parameter entirely. However, if you pass in a complex object, then the behavior is a little
           different. For example:
@@ -569,7 +569,7 @@ ps.setInt(1,id);]]></source>
         </p>
 
         <p>
-          That's nice and simple for passing parameters into statements. But there are a lot of other
+          That's nice and leetcode.simple for passing parameters into statements. But there are a lot of other
           features of parameter maps.
         </p>
 
@@ -667,13 +667,13 @@ ps.setInt(1,id);]]></source>
           do away with 90% of the code that JDBC requires to retrieve data from <code>ResultSet</code>s, and in some cases
           allows you to do things that JDBC does not even support. In fact, to write the equivalent code for
           something like a join mapping for a complex statement could probably span thousands of lines of
-          code. The design of the <code>ResultMap</code>s is such that simple statements don't require explicit result
+          code. The design of the <code>ResultMap</code>s is such that leetcode.simple statements don't require explicit result
           mappings at all, and more complex statements require no more than is absolutely necessary to
           describe the relationships.
         </p>
 
         <p>
-          You've already seen examples of simple mapped statements that don't have an explicit <code>resultMap</code>. For
+          You've already seen examples of leetcode.simple mapped statements that don't have an explicit <code>resultMap</code>. For
           example:
         </p>
 
@@ -764,7 +764,7 @@ public class User {
 
         <p>
           The great thing about <code>ResultMap</code>s is that you've already learned a lot about them, but you haven't
-          even seen one yet! These simple cases don't require any more than you've seen here. Just for example
+          even seen one yet! These leetcode.simple cases don't require any more than you've seen here. Just for example
           sake, let's see what this last example would look like as an external <code>resultMap</code>, as that is another
           way to solve column name mismatches.
         </p>
@@ -787,7 +787,7 @@ public class User {
 </select>]]></source>
 
         <p>
-          Now if only the world was always that simple.
+            Now if only the world was always that leetcode.simple.
         </p>
 
 	    <h4>Advanced Result Maps</h4>
@@ -837,11 +837,11 @@ public class User {
 </select>]]></source>
 
         <p>
-          You'd probably want to map it to an intelligent object model consisting of a Blog that was written
-          by an Author, and has many Posts, each of which may have zero or many Comments and Tags. The
-          following is a complete example of a complex ResultMap (assume Author, Blog, Post, Comments and Tags
-          are all type aliases). Have a look at it, but don't worry, we're going to go through each step.
-          While it may look daunting at first, it's actually very simple.
+            You'd probably want to map it to an intelligent object model consisting of a Blog that was written
+            by an Author, and has many Posts, each of which may have zero or many Comments and Tags. The
+            following is a complete example of a complex ResultMap (assume Author, Blog, Post, Comments and Tags
+            are all type aliases). Have a look at it, but don't worry, we're going to go through each step.
+            While it may look daunting at first, it's actually very leetcode.simple.
         </p>
 
         <source><![CDATA[<!-- Very Complex Result Map -->
@@ -949,7 +949,7 @@ public class User {
           <span class="label important">Best Practice</span> Always build ResultMaps incrementally. Unit
           tests really help out here. If you try to
           build a gigantic <code>resultMap</code> like the one above all at once, it's likely you'll get it wrong and it
-          will be hard to work with. Start simple, and evolve it a step at a time. And unit test! The downside
+          will be hard to work with. Start leetcode.simple, and evolve it a step at a time. And unit test! The downside
           to using frameworks is that they are sometimes a bit of a black box (open source or not). Your best
           bet to ensure that you're achieving the behaviour that you intend, is to write unit tests. It also
           helps to have them when submitting bugs.
@@ -967,7 +967,7 @@ public class User {
         <p>
           These are the most basic of result mappings. Both <i>id</i> and
           <i>result</i> map a single column value to a
-          single property or field of a simple data type (String, int, double, Date, etc.).
+          single property or field of a leetcode.simple data type (String, int, double, Date, etc.).
         </p>
 
         <p>
@@ -999,7 +999,7 @@ public class User {
                 given
                 name. In both cases you can use complex property navigation using the usual dot
                 notation. For
-                example, you can map to something simple like: <code>username</code>, or to something more
+                example, you can map to something leetcode.simple like: <code>username</code>, or to something more
                 complicated
                 like: <code>address.street.number</code>.
               </td>
@@ -1267,7 +1267,7 @@ public class User {
                 The field or property to map the column result to. If a matching JavaBeans property
                 exists for the given name, then that will be used. Otherwise, MyBatis will look for a
                 field of the given name. In both cases you can use complex property navigation using the
-                usual dot notation. For example, you can map to something simple like: <code>username</code>, or to
+                usual dot notation. For example, you can map to something leetcode.simple like: <code>username</code>, or to
                 something more complicated like: <code>address.street.number</code>.
               </td>
             </tr>
@@ -1372,7 +1372,7 @@ public class User {
         </p>
 
         <p>
-          While this approach is simple, it will not perform well for large data sets or lists. This problem
+          While this approach is leetcode.simple, it will not perform well for large data sets or lists. This problem
           is known as the "N+1 Selects Problem". In a nutshell, the N+1 selects problem is caused like this:
         </p>
 
@@ -1734,7 +1734,7 @@ SELECT * FROM AUTHOR WHERE ID = #{id}]]></source>
 
         <p>
           Again, we've joined the Blog and Post tables, and have taken care to ensure quality result column
-          labels for simple mapping. Now mapping a Blog with its collection of Post mappings is as simple as:
+          labels for leetcode.simple mapping. Now mapping a Blog with its collection of Post mappings is as leetcode.simple as:
         </p>
 
         <source><![CDATA[<resultMap id="blogResult" type="Blog">
@@ -1821,7 +1821,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
         <p>
           Sometimes a single database query might return result sets of many different (but hopefully somewhat
           related) data types. The discriminator element was designed to deal with this situation, and others,
-          including class inheritance hierarchies. The discriminator is pretty simple to understand, as it
+          including class inheritance hierarchies. The discriminator is pretty leetcode.simple to understand, as it
           behaves much like a switch statement in Java.
         </p>
 
@@ -1864,7 +1864,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
           Then ONLY the doorCount property would be loaded. This is done to allow completely independent
           groups of discriminator cases, even ones that have no relationship to the parent resultMap. In this
           case we do of course know that there's a relationship between cars and vehicles, as a Car is-a
-          Vehicle. Therefore, we want the rest of the properties loaded too. One simple change to the
+          Vehicle. Therefore, we want the rest of the properties loaded too. One leetcode.simple change to the
           resultMap and we're set to go.
         </p>
 
@@ -1917,7 +1917,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
       <subsection name="Auto-mapping">
 
         <p>
-          As you have already seen in the previous sections, in simple cases MyBatis can auto-map the results for you 
+          As you have already seen in the previous sections, in leetcode.simple cases MyBatis can auto-map the results for you
           and in others you will need to build a result map. 
           But as you will see in this section you can also mix both strategies. 
           Let's have a deeper look at how auto-mapping works. 
@@ -2020,7 +2020,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
         <source><![CDATA[<cache/>]]></source>
 
         <p>
-          Literally that's it. The effect of this one simple statement is as follows:
+          Literally that's it. The effect of this one leetcode.simple statement is as follows:
         </p>
 
         <ul>
@@ -2121,7 +2121,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
         <p>
           This example demonstrates how to use a custom cache implementation. The class specified in the type
           attribute must implement the org.apache.ibatis.cache.Cache interface and provide a constructor that gets 
-          an String id as an argument. This interface is one of the more complex in the MyBatis framework, but simple given what it does.
+          an String id as an argument. This interface is one of the more complex in the MyBatis framework, but leetcode.simple given what it does.
         </p>
 
         <source><![CDATA[public interface Cache {
@@ -2145,7 +2145,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
 </cache>]]></source>
 
         <p>
-          You can use JavaBeans properties of all simple types, MyBatis will do the conversion.
+          You can use JavaBeans properties of all leetcode.simple types, MyBatis will do the conversion.
           And you can specify a placeholder(e.g. <code>${cache.file}</code>) to replace value defined at <a href="configuration.html#properties">configuration properties</a>.
         </p>
 
@@ -2168,7 +2168,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
           It's important to remember that a cache configuration and the cache instance are bound to the
           namespace of the SQL Map file. Thus, all statements in the same namespace as the cache are bound by
           it. Statements can modify how they interact with the cache, or exclude themselves completely by
-          using two simple attributes on a statement-by-statement basis. By default, statements are configured
+          using two leetcode.simple attributes on a statement-by-statement basis. By default, statements are configured
           like this:
         </p>
 

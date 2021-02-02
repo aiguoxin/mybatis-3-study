@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -11,7 +13,7 @@ public class LockTest {
     public static void main(String[] args){
         for(int i=0;i<10;i++){
             new Thread(() -> {
-//                new AutoLock(REENTRANT_LOCK)这样会报错
+//                new leetcode.AutoLock(REENTRANT_LOCK)这样会报错
                 try(AutoLock autoLock = new AutoLock(REENTRANT_LOCK)){
                     System.out.println("lock....");
                 } catch (Exception e) {

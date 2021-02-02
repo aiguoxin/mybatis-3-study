@@ -1,4 +1,4 @@
-package com.agx;
+package leetcode;
 
 import java.util.HashMap;
 import java.util.Map;

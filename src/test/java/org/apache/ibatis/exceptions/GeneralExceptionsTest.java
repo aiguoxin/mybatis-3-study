@@ -37,7 +37,7 @@ import org.junit.Test;
 
 public class GeneralExceptionsTest {
 
-  private static final String EXPECTED_MESSAGE = "Test Message";
+  private static final String EXPECTED_MESSAGE = "leetcode.Test Message";
   private static final Exception EXPECTED_CAUSE = new Exception("Nested Exception");
 
   @Test

@@ -53,7 +53,7 @@ public class XMLIncludeTransformer {
 
   /**
    * Recursively apply includes through all SQL fragments.
-   * @param source Include node in DOM tree
+   * @param source Include node in DOM leetcode.tree
    * @param variablesContext Current context for static variables with values
    */
   private void applyIncludes(Node source, final Properties variablesContext, boolean included) {

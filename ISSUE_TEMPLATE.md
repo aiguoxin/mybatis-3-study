@@ -16,7 +16,7 @@ Please fill out the BUG REPORT FORM below.
 To fix a bug, we need to reproduce it first.
 And we spend a lot of time just trying to reproduce the reported problem, so please consider creating a failing test case or an example project.
 
-- How to create a test case : https://github.com/mybatis/mybatis-3/wiki/Unit-Test
+- How to create a test case : https://github.com/mybatis/mybatis-3/wiki/Unit-leetcode.Test
 - How to create a good example : http://sscce.org
 - How to upload your project to GitHub: https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
@@ -34,7 +34,7 @@ Feature request?
 
 ## Database vendor and version
 
-## Test case or example project
+## leetcode.Test case or example project
 
 ## Steps to reproduce
 

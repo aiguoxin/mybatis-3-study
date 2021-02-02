@@ -33,7 +33,7 @@ import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 
 /**
- * This is a simple, synchronous, thread-safe database connection pool.
+ * This is a leetcode.simple, synchronous, thread-safe database connection pool.
  * PooledDataSource：一个简单，同步的、线程安全的数据库连接池
  *
  * @author Clinton Begin

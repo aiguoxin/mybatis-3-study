@@ -46,7 +46,7 @@ public class HeavyInitialLoadTest {
   private static final int THREAD_COUNT = 5;
   
   /**
-   * Test to demonstrate the effect of the 
+   * leetcode.Test to demonstrate the effect of the
    * https://issues.apache.org/jira/browse/OGNL-121 issue in ognl on mybatis.
    * 
    * Use the thing mapper for the first time in multiple threads. The mapper contains

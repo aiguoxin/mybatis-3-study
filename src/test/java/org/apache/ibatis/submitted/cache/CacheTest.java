@@ -54,7 +54,7 @@ public class CacheTest {
   }
 
   /*
-   * Test Plan: 
+   * leetcode.Test Plan:
    *  1) SqlSession 1 executes "select * from A".
    *  2) SqlSession 1 closes.
    *  3) SqlSession 2 executes "delete from A where id = 1"
@@ -82,7 +82,7 @@ public class CacheTest {
   }
 
   /*
-   * Test Plan: 
+   * leetcode.Test Plan:
    *  1) SqlSession 1 executes "select * from A".
    *  2) SqlSession 1 closes.
    *  3) SqlSession 2 executes "delete from A where id = 1"
@@ -116,7 +116,7 @@ public class CacheTest {
   }
 
   /*
-   * Test Plan with Autocommit on:
+   * leetcode.Test Plan with Autocommit on:
    *  1) SqlSession 1 executes "select * from A".
    *  2) SqlSession 1 closes.
    *  3) SqlSession 2 executes "delete from A where id = 1"
@@ -147,9 +147,9 @@ public class CacheTest {
   }
 
   /*-
-   * Test case for #405
+   * leetcode.Test case for #405
    *
-   * Test Plan with Autocommit on:
+   * leetcode.Test Plan with Autocommit on:
    *  1) SqlSession 1 executes "select * from A".
    *  2) SqlSession 1 closes.
    *  3) SqlSession 2 executes "insert into person (id, firstname, lastname) values (3, hello, world)"
@@ -180,7 +180,7 @@ public class CacheTest {
   }
 
   /*-
-   * Test Plan with Autocommit on:
+   * leetcode.Test Plan with Autocommit on:
    *  1) SqlSession 1 executes select to cache result
    *  2) SqlSession 1 closes.
    *  3) SqlSession 2 executes insert without flushing cache

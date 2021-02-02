@@ -215,7 +215,7 @@ try {
   </select>
 </mapper>]]></source>
 				<p>
-					Aunque pudiera parecer que hay excesivo XML para un ejemplo tan simple,
+					Aunque pudiera parecer que hay excesivo XML para un ejemplo tan leetcode.simple,
 					en realidad no hay tanto. Puedes definir tantos mapped statements
 					en un solo fichero XML como quieras así que rentabilizarás las
 					líneas XML extra que corresponden a la cabecera XML y a la
@@ -386,7 +386,7 @@ try {
 					descartarlos. No es necesario que sean cerrados explícitamente.
 					Aunque no es un problema propagar estos objetos por varias clases
 					dentro de una misma llamada, debes tener cuidado porque puede que
-					la situación se te vaya de las manos. Hazlo fácil (keep it simple)
+					la situación se te vaya de las manos. Hazlo fácil (keep it leetcode.simple)
 					y mantén los mappers en el ámbito de método. Este ejemplo muestra
 					esta práctica:</p>
 				<source><![CDATA[SqlSession session = sqlSessionFactory.openSession();

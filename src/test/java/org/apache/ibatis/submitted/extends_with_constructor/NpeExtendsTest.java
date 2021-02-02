@@ -32,7 +32,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /*
- * Test for NPE when using extends.
+ * leetcode.Test for NPE when using extends.
  * 
  * @author poitrac
  */

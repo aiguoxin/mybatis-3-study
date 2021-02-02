@@ -14,6 +14,6 @@
  *    limitations under the License.
  */
 /**
- * Hyper-simple Datasource.
+ * Hyper-leetcode.simple Datasource.
  */
 package org.apache.ibatis.datasource.unpooled;

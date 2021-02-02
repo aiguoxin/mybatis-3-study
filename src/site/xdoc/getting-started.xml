@@ -70,13 +70,13 @@
         or from a custom prepared instance of the Configuration class.
       </p>
       <p>
-        Building a SqlSessionFactory instance from an XML file is very
-        simple. It is recommended that you use a classpath resource for
-        this configuration, but you could use any InputStream instance,
-        including one created from a literal file path or a file:// URL.
-        MyBatis includes a utility class, called Resources, that contains
-        a number of methods that make it simpler to load resources from
-        the classpath and other locations.
+          Building a SqlSessionFactory instance from an XML file is very
+          leetcode.simple. It is recommended that you use a classpath resource for
+          this configuration, but you could use any InputStream instance,
+          including one created from a literal file path or a file:// URL.
+          MyBatis includes a utility class, called Resources, that contains
+          a number of methods that make it simpler to load resources from
+          the classpath and other locations.
       </p>
       <source><![CDATA[
 String resource = "org/mybatis/example/mybatis-config.xml";
@@ -89,7 +89,7 @@ SqlSessionFactory sqlSessionFactory =
         Connection instances, as well as a TransactionManager for
         determining how transactions should be scoped and controlled. The
         full details of the XML configuration file can be found later in
-        this document, but here is a simple example:
+        this document, but here is a leetcode.simple example:
       </p>
       <source><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
@@ -225,7 +225,7 @@ try {
   </select>
 </mapper>]]></source>
       <p>
-        While this looks like a lot of overhead for this simple example, it is
+        While this looks like a lot of overhead for this leetcode.simple example, it is
         actually very light. You can define as many mapped statements in a
         single mapper XML file as you like, so you get a lot of mileage out
         of the XML header and doctype declaration. The rest of the file is
@@ -302,7 +302,7 @@ public interface BlogMapper {
   Blog selectBlog(int id);
 }]]></source>
       <p>
-        The annotations are a lot cleaner for simple statements, however, Java
+        The annotations are a lot cleaner for leetcode.simple statements, however, Java
         Annotations are both limited and messier for more complicated
         statements. Therefore, if you have to do anything complicated,
         you're better off with XML mapped statements.
@@ -394,7 +394,7 @@ try {
           explicitly. While it's not a problem to keep them around throughout
           a request, similar to the SqlSession, you might find that managing
           too many resources at this level will quickly get out of hand. Keep
-          it simple, keep Mappers in the method scope. The following example
+          it leetcode.simple, keep Mappers in the method scope. The following example
           demonstrates this practice.
         </p>
         <source><![CDATA[SqlSession session = sqlSessionFactory.openSession();

@@ -60,7 +60,7 @@ public class SqlProviderTest {
             "org/apache/ibatis/submitted/sqlprovider/CreateDB.sql");
   }
 
-  // Test for list
+  // leetcode.Test for list
   @Test
   public void shouldGetTwoUsers() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
@@ -75,7 +75,7 @@ public class SqlProviderTest {
     }
   }
 
-  // Test for simple value without @Param
+  // leetcode.Test for leetcode.simple value without @Param
   @Test
   public void shouldGetOneUser() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
@@ -92,7 +92,7 @@ public class SqlProviderTest {
     }
   }
 
-  // Test for empty
+  // leetcode.Test for empty
   @Test
   public void shouldGetAllUsers() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
@@ -106,7 +106,7 @@ public class SqlProviderTest {
     }
   }
 
-  // Test for single JavaBean
+  // leetcode.Test for single JavaBean
   @Test
   public void shouldGetUsersByCriteria() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
@@ -131,7 +131,7 @@ public class SqlProviderTest {
     }
   }
 
-  // Test for single map
+  // leetcode.Test for single map
   @Test
   public void shouldGetUsersByCriteriaMap() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
@@ -156,7 +156,7 @@ public class SqlProviderTest {
     }
   }
 
-  // Test for multiple parameter without @Param
+  // leetcode.Test for multiple parameter without @Param
   @Test
   public void shouldGetUsersByName() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
@@ -170,7 +170,7 @@ public class SqlProviderTest {
     }
   }
 
-  // Test for map without @Param
+  // leetcode.Test for map without @Param
   @Test
   public void shouldGetUsersByNameUsingMap() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
@@ -184,7 +184,7 @@ public class SqlProviderTest {
     }
   }
 
-  // Test for multiple parameter with @Param
+  // leetcode.Test for multiple parameter with @Param
   @Test
   public void shouldGetUsersByNameWithParamNameAndOrderBy() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
@@ -198,7 +198,7 @@ public class SqlProviderTest {
     }
   }
 
-  // Test for map with @Param
+  // leetcode.Test for map with @Param
   @Test
   public void shouldGetUsersByNameWithParamNameUsingMap() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
@@ -212,7 +212,7 @@ public class SqlProviderTest {
     }
   }
 
-  // Test for simple value with @Param
+  // leetcode.Test for leetcode.simple value with @Param
   @Test
   public void shouldGetUsersByNameWithParamName() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {

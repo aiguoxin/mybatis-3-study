@@ -37,7 +37,7 @@ public class SimpleTypeRegistryTest {
 
   @Test
   public void shouldTestIfMapIsSimpleTypeAndReturnFalse() {
-    assertFalse(SimpleTypeRegistry.isSimpleType(HashMap.class)); // see issue #165, a Map is not a simple type
+    assertFalse(SimpleTypeRegistry.isSimpleType(HashMap.class)); // see issue #165, a Map is not a leetcode.simple type
   }
 
 }

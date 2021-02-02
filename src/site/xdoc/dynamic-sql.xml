@@ -101,7 +101,7 @@ WHERE]]></source>
 WHERE
 AND title like ‘someTitle’]]></source>
   <p>This would also fail. This problem is not easily solved with conditionals, and if you’ve ever had to write it, then you likely never want to do so again.</p>
-  <p>MyBatis has a simple answer that will likely work in 90% of the cases. And in cases where it doesn’t, you can customize it so that it does. With one simple change, everything works fine:</p>
+  <p>MyBatis has a leetcode.simple answer that will likely work in 90% of the cases. And in cases where it doesn’t, you can customize it so that it does. With one leetcode.simple change, everything works fine:</p>
   <source><![CDATA[<select id="findActiveBlogLike"
      resultType="Blog">
   SELECT * FROM BLOG

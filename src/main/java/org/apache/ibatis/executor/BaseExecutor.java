@@ -333,7 +333,7 @@ public abstract class BaseExecutor implements Executor {
     List<E> list;
     localCache.putObject(key, EXECUTION_PLACEHOLDER);//在缓存中添加占位符
     try {
-      //调用抽象方法doQuery，方法查询数据库并返回结果，可选的实现包括：simple、reuse、batch
+      //调用抽象方法doQuery，方法查询数据库并返回结果，可选的实现包括：leetcode.simple、reuse、batch
       list = doQuery(ms, parameter, rowBounds, resultHandler, boundSql);
     } finally {
       localCache.removeObject(key);//在缓存中删除占位符

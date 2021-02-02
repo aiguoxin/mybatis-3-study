@@ -146,7 +146,7 @@ org.apache.ibatis.logging.LogFactory.useStdOutLogging();]]></source>
         <h4>
           Step 2: Configure Log4J
         </h4>
-        <p>Configuring Log4J is simple. Suppose you want to enable the log for this mapper:
+        <p>Configuring Log4J is leetcode.simple. Suppose you want to enable the log for this mapper:
         </p>
         <source><![CDATA[package org.mybatis.example;
 public interface BlogMapper {

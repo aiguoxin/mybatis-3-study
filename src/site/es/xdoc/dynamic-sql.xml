@@ -102,7 +102,7 @@ WHERE]]></source>
 WHERE 
 AND title like ‘someTitle’]]></source>
   <p>Y eso también fallará. Este problema no se resuelve fácil con condicionales, y si alguna vez tienes que hacerlo, posiblemente no quieras repetirlo nunca más.</p>
-  <p>MyBatis tiene una respuesta sencilla que funcionará en el 90% de los casos. Y en los casos en los que no funciona puedes personalizarlo para hacerlo funcionar. Con un cambio simple, todo funciona correctamente:</p>
+  <p>MyBatis tiene una respuesta sencilla que funcionará en el 90% de los casos. Y en los casos en los que no funciona puedes personalizarlo para hacerlo funcionar. Con un cambio leetcode.simple, todo funciona correctamente:</p>
   <source><![CDATA[<select id="findActiveBlogLike" 
      resultType="Blog">
   SELECT * FROM BLOG 

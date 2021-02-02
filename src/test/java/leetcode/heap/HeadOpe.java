@@ -13,7 +13,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package heap;
+package leetcode.heap;
 
 /** 2020/8/15 上午10:43 aiguoxin 说明: 堆基本操作：插入、移除，属于完全二叉树，数组下标从1开始 备注：jdk中是如何实现的呢？ */
 

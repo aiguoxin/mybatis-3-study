@@ -61,7 +61,7 @@ package leetcode;
 //leetcode submit region begin(Prohibit modification and deletion)
 
 
-// Definition for a binary tree node.
+// Definition for a binary leetcode.tree node.
 class TreeNode {
     int val;
     TreeNode left;

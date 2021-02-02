@@ -63,7 +63,7 @@ public class ResolverUtil<T> {
   private static final Log log = LogFactory.getLog(ResolverUtil.class);
 
   /**
-   * A simple interface that specifies how to test classes to determine if they
+   * A leetcode.simple interface that specifies how to test classes to determine if they
    * are to be included in the results produced by the ResolverUtil.
    */
   public interface Test {

@@ -1,4 +1,4 @@
-/**
+package leetcode; /**
  *    Copyright 2009-2020 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,16 +13,22 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-import org.apache.commons.lang3.StringUtils;
+/**
+ * 2020/8/3 下午2:36
+ * aiguoxin
+ * 说明:
+ */
+public class StaticTest {
 
-/** 2020/7/8 上午9:58 aiguoxin 说明: */
-public class Test {
+    static {
+        System.out.println("i'am in static...");
+    }
+
+    public static void print(){
+        System.out.println("i'am in print...");
+    }
+
     public static void main(String[] args) {
-        String idCard = "130527*********235";
-        if (StringUtils.contains(idCard, "******")) {
-            System.out.println("contain");
-        }else{
-            System.out.println("no contain");
-        }
+        StaticTest.print();
     }
 }
