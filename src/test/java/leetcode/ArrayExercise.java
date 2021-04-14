@@ -1,7 +1,6 @@
 package leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /** 2020/11/19 下午10:08 aiguoxin 说明: */
 public class ArrayExercise {
@@ -20,8 +19,11 @@ public class ArrayExercise {
         //        int[] result = twoSum(nums, 9);
         //        System.out.println(String.format("%s,%s", result[0], result[1]));
 
-        int initVal = 1534236469;
-        System.out.println(reverse(initVal));
+        //        int initVal = 1534236469;
+        //        System.out.println(reverse(initVal));
+
+        int[] nums = {-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4};
+        findSumIsZero(nums);
     }
 
     /**
@@ -91,7 +93,6 @@ public class ArrayExercise {
         return i;
     }
 
-
     public static int[] twoSum(int[] nums, int target) {
         assert nums.length > 1;
         Map<Integer, Integer> valMap = new HashMap();
@@ -112,8 +113,9 @@ public class ArrayExercise {
 
     /**
      * https://leetcode-cn.com/problems/reverse-integer/solution/zheng-shu-fan-zhuan-by-leetcode/
+     *
      * @param x 需要改进：应该使用%10、/10方式模拟出栈入栈
-     * @return  思路不对！！！！
+     * @return 思路不对！！！！
      */
     public static int reverse(int x) {
         if (x == 0) {
@@ -137,17 +139,63 @@ public class ArrayExercise {
             if (x > 0 || (x < 0 && k > 0)) {
                 result +=
                         Integer.valueOf(String.valueOf(resultChar[k]))
-                                * Math.pow(10, resultChar.length - k-1);
+                                * Math.pow(10, resultChar.length - k - 1);
             }
         }
 
         if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE) {
             return 0;
         } else {
-            if(x<0){
+            if (x < 0) {
                 return -Integer.valueOf(String.valueOf(result));
             }
             return Integer.valueOf(String.valueOf(result));
         }
+    }
+
+    /**
+     * 找出所有和为0且不重复的三元组如： nums=[-1,0,1,-1,2,-1,-4] 输出: [[-1,-1,2],[-1,0,1]]
+     * https://leetcode-cn.com/problems/3sum/solution/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/
+     * 缺点：三重循环太耗时，需要双指针操作
+     * @param nums
+     */
+    public static List<List<Integer>> findSumIsZero(int[] nums) {
+        int length = nums.length;
+        if (length < 3) {
+            new ArrayList<>();
+        }
+        Arrays.sort(nums);
+        List<List<Integer>> result = new ArrayList<>();
+        //        Map<String,Integer> filterMap = new HashMap<>();
+
+        for (int i = 0; i < length - 2; i++) {
+            if (i == 0 && nums[i] > 0) {
+                break;
+            }
+            if (i == 0 || nums[i] != nums[i - 1]) {
+                for (int j = i + 1; j < length - 1; j++) {
+                    if (j == i+1 || nums[j] != nums[j - 1]) { // 去掉重复
+                        for (int k = j + 1; k < length; k++) {
+                            if (k == j+1 || nums[k] != nums[k - 1]) {
+                                int total = nums[i] + nums[j] + nums[k];
+                                if (total == 0) {
+                                    List<Integer> list = Arrays.asList(nums[i], nums[j], nums[k]);
+                                    //                                    // 去掉重复的，使用map超时
+                                    // list.sort(Comparator.comparingInt(Integer::intValue));
+                                    //                        String key =
+                                    // list.stream().map(e->String.valueOf(e)).collect(Collectors.joining(","));
+                                    //                        if(filterMap.get(key) == null){
+                                    result.add(list);
+                                    //                            filterMap.put(key,1);
+                                    //                        }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println(result);
+        return result;
     }
 }
