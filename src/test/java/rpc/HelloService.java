@@ -13,19 +13,13 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package java8;
-
-import java.util.Optional;
+package rpc;
 
 /**
- * 2021/4/23 下午3:40
+ * 2021/10/25 下午5:58
  * aiguoxin
  * 说明:
  */
-public class NullTest {
-    public static void main(String[] args) {
-        String name = null;
-        name = Optional.ofNullable(name).orElse("");
-        System.out.println("name="+name);
-    }
+public interface HelloService {
+    String hello(String name);
 }

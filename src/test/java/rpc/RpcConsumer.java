@@ -13,19 +13,20 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package java8;
-
-import java.util.Optional;
+package rpc;
 
 /**
- * 2021/4/23 下午3:40
+ * 2021/10/25 下午5:59
  * aiguoxin
  * 说明:
  */
-public class NullTest {
-    public static void main(String[] args) {
-        String name = null;
-        name = Optional.ofNullable(name).orElse("");
-        System.out.println("name="+name);
+public class RpcConsumer {
+    public static void main(String[] args) throws Exception {
+        HelloService service = RpcFramework.refer(HelloService.class, "127.0.0.1", 1234);
+        for (int i = 0; i < Integer.MAX_VALUE; i ++) {
+            String hello = service.hello("World" + i);
+            System.out.println(hello);
+            Thread.sleep(1000);
+        }
     }
 }
