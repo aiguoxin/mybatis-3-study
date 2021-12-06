@@ -44,6 +44,7 @@ public class MergeTwoLists {
             cur = cur.next;
         }
 
+        //使用         cur.next = list1 == null ? list2 :list1; 优化
         while (list1 != null) {
             cur.next = list1;
             list1 = list1.next;
@@ -55,6 +56,8 @@ public class MergeTwoLists {
             list2 = list2.next;
             cur = cur.next;
         }
+
+        // 还有递归解法：https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/he-bing-liang-ge-you-xu-lian-biao-by-leetcode-solu/
 
         return head.next;
     }
