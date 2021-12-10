@@ -13,7 +13,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package leetcode; /**
+package leetcode.recursion; /**
  *    Copyright 2009-2020 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
@@ -52,6 +52,7 @@ public class QuickSort {
             return;
         }
         int q = partitionBySwap(sortArray, p ,r);
+//        int q = (p+r)/2;
         quickSortChild(sortArray, p, q-1);
         quickSortChild(sortArray, q+1, r);
     }
