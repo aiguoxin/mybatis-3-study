@@ -26,6 +26,7 @@ public class SameTree {
     /**
      * 判断有点复杂
      * 怎么优化？ 主要是判断条件，采用异或运算符
+     *
      * @param p
      * @param q
      * @return
@@ -91,24 +92,5 @@ public class SameTree {
         }
 
         return true;
-    }
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }
