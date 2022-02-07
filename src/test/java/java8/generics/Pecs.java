@@ -41,6 +41,8 @@ public class Pecs {
 
         /***************以上都是声明对象使用extends或super，和PECS原则（方法参数）有区别*******************/
 
-        
+
+        /*******协变Covariance与逆变Contravariance********/
+//        Collections.copy(); 用法参考
     }
 }
