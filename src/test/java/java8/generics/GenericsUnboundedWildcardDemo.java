@@ -1,4 +1,4 @@
-package java8;
+package java8.generics;
 
 import java.util.ArrayList;
 import java.util.Arrays;
