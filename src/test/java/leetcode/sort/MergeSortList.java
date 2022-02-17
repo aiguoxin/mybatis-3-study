@@ -13,7 +13,9 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package leetcode;
+package leetcode.sort;
+
+import leetcode.ListNode;
 
 /** 2021/2/2 上午8:41 aiguoxin 说明: 合并两个有序列表 */
 public class MergeSortList {
