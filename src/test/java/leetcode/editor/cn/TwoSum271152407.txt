@@ -1,0 +1,26 @@
+class Solution {
+    static Map<Integer,Integer> dataMap = new HashMap<>();
+
+    public int[] twoSum(int[] nums, int target) {
+        int[] result =new int[2];
+        for(Integer i=0; i<nums.length; i++){
+            Integer currentVal = target-nums[i];
+            if(dataMap.containsKey(currentVal)){
+                System.out.println(dataMap.get(currentVal)+","+i);
+                result[0] = dataMap.get(currentVal);
+                result[1] = i;
+                return result;
+            }else{
+                dataMap.put(nums[i],i);
+            }
+        }
+        return result;
+    }
+}
+
+//total_testcases:57
+//total_correct:47
+//input_formatted:[3,3]
+6
+//expected_output:[0,1]
+//code_output:[0,0]
