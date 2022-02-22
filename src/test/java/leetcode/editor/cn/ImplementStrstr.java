@@ -48,8 +48,14 @@ package leetcode.editor.cn;//实现 strStr() 函数。
 
 import java.util.Objects;
 
+/***
+ * 暴力法O(m*n)，jdk也是使用的暴力法，没有使用KMP之类算法，原因：http://stackoverflow
+ * .com/questions/19543547/why-jdks-string-indexof-does-not-use-kmp/
+ * KMP和Boyer-Moore等算法，都需要辅助数组，时间复杂度O(m+n)
+ */
+
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution2 {
     public static int strStr(String haystack, String needle) {
         if (Objects.equals(needle, "")) {
             return 0;
