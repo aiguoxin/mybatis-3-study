@@ -49,7 +49,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution1 {
 
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer,Integer> dataMap = new HashMap<>();
