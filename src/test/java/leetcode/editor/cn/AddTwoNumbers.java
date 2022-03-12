@@ -57,7 +57,7 @@ import leetcode.ListNode;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class Solution0311 {
     public static ListNode addTwoNumbersForError(ListNode l1, ListNode l2) {
         //先拆成整数，相加后，再存入链表
         int i1 = l1.val;
