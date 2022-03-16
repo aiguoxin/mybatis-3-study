@@ -28,7 +28,7 @@ package leetcode.editor.cn;//给你两个二进制字符串，返回它们的和
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution031517 {
     public static String addBinary(String a, String b) {
         //补齐
         int num = Math.abs(a.length() - b.length());
