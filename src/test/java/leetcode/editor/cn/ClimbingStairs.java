@@ -36,7 +36,7 @@ package leetcode.editor.cn;//假设你正在爬楼梯。需要 n 阶你才能到
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution0316 {
     public static int climbStairs(int n) {
         if (n == 1 || n == 2) {
             return n;
