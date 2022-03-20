@@ -43,7 +43,7 @@ import leetcode.ListNode;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class Solution0318 {
     public static ListNode deleteDuplicates(ListNode head) {
         if(head == null || head.next == null){
             return head;
