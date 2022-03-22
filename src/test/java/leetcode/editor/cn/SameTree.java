@@ -56,7 +56,7 @@ import leetcode.bfs.TreeNode;
  *     }
  * }
  */
-class Solution {
+class Solution032211{
     /***用的深度搜索，递归方式。如果使用广度搜索，则需要借助队列！！！***/
     public static boolean isSameTree(TreeNode p, TreeNode q) {
         if ((p == null && q != null) || (p != null && q == null)) {
