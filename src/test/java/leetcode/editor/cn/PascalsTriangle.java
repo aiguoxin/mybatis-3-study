@@ -35,7 +35,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution032511 {
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> res = new LinkedList<>();
         List<Integer> first = new LinkedList<>();
