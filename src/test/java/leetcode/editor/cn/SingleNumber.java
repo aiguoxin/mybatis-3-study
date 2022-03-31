@@ -19,7 +19,7 @@ package leetcode.editor.cn;//给定一个非空整数数组，除了某个元素
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution033114{
     /**
      * 借助了异或和额外标记数组，性能太差。
      * 异或：相同异或为0，0与自身异或则为1。所以，遍历数组，全部元素异或即可得结果！！！
