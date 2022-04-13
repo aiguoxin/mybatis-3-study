@@ -48,7 +48,7 @@ package leetcode.editor.cn;//给你一个字符串 columnTitle ，表示 Excel �
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution0413 {
     //26进制
     public static int titleToNumber(String columnTitle) {
         int sum = 0;
