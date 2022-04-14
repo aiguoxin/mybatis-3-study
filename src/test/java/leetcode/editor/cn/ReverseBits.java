@@ -44,7 +44,7 @@ package leetcode.editor.cn;//颠倒给定的 32 位无符号整数的二进制�
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution041316 {
-    
+
     // you need treat n as an unsigned value
     public static int reverseBits(int n) {
         int res = 0;
