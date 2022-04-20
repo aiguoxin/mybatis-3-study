@@ -56,7 +56,7 @@ import leetcode.ListNode;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class Solution041918 {
 
     //采用的尾插法
     //递归和直接使用当前和前一个指针，都比较抽象
