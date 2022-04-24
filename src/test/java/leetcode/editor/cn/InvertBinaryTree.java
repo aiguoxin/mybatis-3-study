@@ -58,7 +58,7 @@ import leetcode.bfs.TreeNode;
  *     }
  * }
  */
-class Solution {
+class Solution0422{
     //这里使用递归。 深度：借助栈。 广度：借助队列。
     public static TreeNode invertTree(TreeNode root) {
         if (root == null) {
