@@ -45,7 +45,7 @@ import leetcode.ListNode;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class Solution042721{
     public static void deleteNode(ListNode node) {
         /**不是末尾节点很重要，可以伪装成子节点，再删子节点。 如果可以是尾结点呢？**/
         node.val = node.next.val;
