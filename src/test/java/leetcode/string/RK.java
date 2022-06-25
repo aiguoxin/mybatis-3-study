@@ -9,6 +9,7 @@ import java.util.Set;
  * aiguoxin 
  * 说明:https://leetcode.cn/problems/longest-duplicate-substring/solution/zui-chang-zhong-fu-zi-chuan-by-leetcode-0i9rd/
  * RK 算法的全称叫 Rabin-Karp 算法，是由它的两位发明者 Rabin 和 Karp 的名字来命名的。这个算法理解起来也不是很难。我个人觉得，它其实就是刚刚讲的 BF 算法的升级版。
+ * 使用字符串Hash进行比较
  */
 public class RK {
     public static String longestDupSubstring(String s) {
