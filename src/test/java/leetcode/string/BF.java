@@ -3,7 +3,7 @@ package leetcode.string;
 /**
  * 6/22/22 11:33
  * aiguoxin 
- * 说明:
+ * 说明:https://leetcode.cn/problems/implement-strstr/
  */
 public class BF {
 

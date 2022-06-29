@@ -8,7 +8,7 @@ import java.util.Set;
  * 6/22/22 17:45
  * aiguoxin 
  * 说明:https://leetcode.cn/problems/longest-duplicate-substring/solution/zui-chang-zhong-fu-zi-chuan-by-leetcode-0i9rd/
- * RK 算法的全称叫 Rabin-Karp 算法，是由它的两位发明者 Rabin 和 Karp 的名字来命名的。这个算法理解起来也不是很难。我个人觉得，它其实就是刚刚讲的 BF 算法的升级版。
+ * RK 算法的全称叫 Rabin-Karp 算法，是由它的两位发明者 Rabin 和 Karp 的名字来命名的，它其实就是BF 算法的升级版。
  * 使用字符串Hash进行比较
  */
 public class RK {
@@ -105,8 +105,54 @@ public class RK {
         return ans;
     }
 
+    public static int indexOfUseRk(String main, String ptn){
+        if (main == null || ptn == null){
+            return -1;
+        }
+
+        int m = main.length();
+        int n = ptn.length();
+        if (n > m){
+            return -1;
+        }
+
+        //计算模式串的hash值
+        int ptnHash = 0;
+        for (int i = 0; i < n; i++) {
+            ptnHash += ptn.charAt(i);
+        }
+
+        int mainHash = 0;
+        for (int i = 0; i <= m - n; i++) {
+            //i == 0时需要遍历计算哈希值，后续不需要
+            if (i == 0) {
+                for (int j = 0; j < n; j++) {
+                    mainHash += main.charAt(j);
+                }
+            }else {
+                mainHash = mainHash - main.charAt(i - 1) + main.charAt(i + n - 1);
+            }
+
+            //如果哈希值相同，为避免哈希冲突，再依次遍历比较
+            if (mainHash == ptnHash){
+                int k = i;
+                int j = 0;
+                while (j < n && main.charAt(k) == ptn.charAt(j)){
+                    ++k;
+                    ++j;
+                }
+                if (j == n){
+                    return i;
+                }
+            }
+        }
+
+        return -1;
+    }
+
     public static void main(String[] args) {
-        System.out.println(longestDupSubstring("abababab"));
+//        System.out.println(longestDupSubstring("abababab"));
+        System.out.println(indexOfUseRk("adbd","bd"));
     }
 }
 
