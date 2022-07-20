@@ -59,7 +59,6 @@ import leetcode.ListNode;
 class Solution041918 {
 
     //采用的尾插法
-    //递归和直接使用当前和前一个指针，都比较抽象
     public static ListNode reverseList(ListNode head) {
         if(head == null || head.next == null){
             return head;
@@ -82,13 +81,31 @@ class Solution041918 {
         return head;
     }
 
-    public static void main(String[] args) {
+
+    public static ListNode reverseList2(ListNode head) {
+        if(head == null || head.next == null){
+            return head;
+        }
+        //保存上一节点
+        ListNode pre = null;
+        ListNode cur = head;
+        while(cur != null){
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+
+        return pre;
+    }
+
+        public static void main(String[] args) {
         //输入：head = [1,2,3,4,5]
 //输出：[5,4,3,2,1]
         ListNode root = null;
 //        ListNode n1 = new ListNode(2);
 //        root.next = n1;
-        ListNode res = reverseList(root);
+        ListNode res = reverseList2(root);
         while (res != null) {
             System.out.println(res.val);
             res = res.next;
