@@ -38,11 +38,14 @@ public class Pecs {
         /**编译报错，泛型不存在继承关系**/
 //        List<Parent> list = new ArrayList<Child>();
 
+
+        //PE，P表示生产者，只出不进，extends表示E
         List<? extends Parent> list = new ArrayList<Child>();
         Parent p = list.get(0);
         //这样会报错，如果存入了父类，不知道要转换成哪个子类
 //        list.add(new Parent());
 
+        //CS，C表示消费者，只进不出，super表示S
         List<? super Child> childList = new ArrayList<Object>();
         //这样报错，不知道取出来转换成哪个父类
 //        Child a = childList.get(0);
