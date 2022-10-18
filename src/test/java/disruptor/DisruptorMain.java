@@ -81,6 +81,7 @@ public class DisruptorMain {
                 // 设置该位置元素的值
                 event.set(l);
             } finally {
+                //标识这个sequence可读
                 ringBuffer.publish(sequence);
             }
             Thread.sleep(10);
