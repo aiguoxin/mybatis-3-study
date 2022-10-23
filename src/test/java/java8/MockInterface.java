@@ -18,7 +18,7 @@ package java8;
 /**
  * 5/11/22 16:40
  * aiguoxin 
- * 说明:
+ * 说明:  普通类模拟接口
  */
 public class MockInterface {
     //私有构造方法

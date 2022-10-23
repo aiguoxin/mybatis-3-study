@@ -1,0 +1,9 @@
+16-Sep-2022 17:21:43.414 WARNING [main] org.apache.catalina.startup.CatalinaProperties.loadProperties Failed to load catalina.properties
+16-Sep-2022 17:21:43.504 WARNING [main] org.apache.catalina.startup.Catalina.load Unable to load server configuration from [/Users/liuruixue/Downloads/mybatis源码与脑图/mybatis-3-master/catalina-home/conf/server.xml]
+16-Sep-2022 17:21:43.504 SEVERE [main] org.apache.catalina.startup.Catalina.start Cannot start server. Server instance is not configured.
+16-Sep-2022 17:21:59.408 WARNING [main] org.apache.catalina.startup.CatalinaProperties.loadProperties Failed to load catalina.properties
+16-Sep-2022 17:21:59.451 WARNING [main] org.apache.catalina.startup.Catalina.load Unable to load server configuration from [/Users/liuruixue/Downloads/mybatis源码与脑图/mybatis-3-master/catalina-home/conf/server.xml]
+16-Sep-2022 17:21:59.451 SEVERE [main] org.apache.catalina.startup.Catalina.start Cannot start server. Server instance is not configured.
+16-Sep-2022 17:22:58.346 WARNING [main] org.apache.catalina.startup.CatalinaProperties.loadProperties Failed to load catalina.properties
+16-Sep-2022 17:22:58.431 WARNING [main] org.apache.catalina.startup.Catalina.load Unable to load server configuration from [/Users/liuruixue/Downloads/mybatis源码与脑图/mybatis-3-master/catalina-home/conf/server.xml]
+16-Sep-2022 17:22:58.431 SEVERE [main] org.apache.catalina.startup.Catalina.start Cannot start server. Server instance is not configured.

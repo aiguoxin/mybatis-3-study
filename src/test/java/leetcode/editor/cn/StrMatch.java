@@ -13,30 +13,26 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package leetcode.editor.cn.greedy;
+package leetcode.editor.cn;
 
-/***
- * https://leetcode.cn/problems/minimum-cost-to-move-chips-to-the-same-position/
- * 偶数移动到偶数，或奇数移动到奇数，都是2n倍，移动之和是0
- * 如果是偶数与奇数之间移动，则是2n+1，移动是1
- * 分别找出奇数和偶数的个数，求最小
- *
+/**
+ * 8/24/22 07:48
+ * aiguoxin 
+ * 说明: https://leetcode.cn/problems/di-string-match/solution/zeng-jian-zi-fu-chuan-pi-pei-by-leetcode-jzm2/
  */
-public class MinMove {
-    public static int minCostToMoveChips(int[] position) {
-        int odd =0, even=0;
-        for (int value : position){
-            if((value & 1) ==0){
-                even++;
-            }else{
-                odd++;
-            }
+public class StrMatch {
+    public static int[] diStringMatch(String s) {
+        int length = s.length();
+        int low = 0, high = s.length();
+        int[] perm = new int[length + 1];
+        for (int i = 0; i < s.length(); i++) {
+            perm[i] = s.charAt(i) == 'I' ? low++ : high--;
         }
-        return Math.min(odd,even);
+        perm[length] = low;
+        return perm;
     }
 
     public static void main(String[] args) {
-        int[] pos = {1,1000000000};
-        System.out.println(minCostToMoveChips(pos));
+
     }
 }
