@@ -72,19 +72,19 @@ public class DisruptorMain {
 
         RingBuffer<Element> ringBuffer = disruptor.getRingBuffer();
 
-        for (int l = 0; true; l++) {
+//        for (int l = 0; true; l++) {
             // 获取下一个可用位置的下标
             long sequence = ringBuffer.next();
             try {
                 // 返回可用位置的元素
                 Element event = ringBuffer.get(sequence);
-                // 设置该位置元素的值
-                event.set(l);
+                // 设置该位置元素的值z
+                event.set(1);
             } finally {
                 //标识这个sequence可读
                 ringBuffer.publish(sequence);
             }
-            Thread.sleep(10);
-        }
+//            Thread.sleep(10);
+//        }
     }
 }
