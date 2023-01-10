@@ -26,12 +26,8 @@ import java.lang.reflect.Proxy;
  */
 public class jdkTest {
     public static void main(String[] args) {
-//        OriginalI originalI = (OriginalI) Proxy.newProxyInstance(jdkTest.class.getClassLoader(),
-//                Original.class.getInterfaces(), (proxy, method, args1) -> {
-//                    method.invoke(new Original(), args1);
-//                    System.out.println("after method...");
-//                    return null;
-//                });
+        System.setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+        //jdk代理，只能赋值给接口，不能是实现类original!!
         OriginalI originalI = (OriginalI) Proxy.newProxyInstance(OriginalI.class.getClassLoader(),
                 Original.class.getInterfaces(), new JdkDynamic(new Original()));
         originalI.test();
@@ -41,27 +37,28 @@ public class jdkTest {
 }
 
 interface OriginalI {
-    void test();
+    String test();
 }
 
 class Original implements OriginalI {
     @Override
-    public void test() {
-        System.out.println("test...");
+    public String test() {
+        return "hello";
     }
 }
 
 class JdkDynamic implements InvocationHandler {
     private Object object;
-    public JdkDynamic(Object target){
+
+    public JdkDynamic(Object target) {
         this.object = target;
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         /***此处一定需要使用被代理的对象，参数proxy没用到？**/
-        method.invoke(object, args);
-        System.out.println("after method...");
-        return null;
+        Object result = method.invoke(object, args);
+        System.out.println("after method..." + result);
+        return result;
     }
 }

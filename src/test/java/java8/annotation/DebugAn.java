@@ -25,4 +25,14 @@ public class DebugAn {
         Count count = DebugAn.class.getAnnotation(Count.class);
         System.out.println(count.count());
     }
+
+    /**
+     * 使用main方法，才会生成代理类！！
+     * @param args
+     */
+    public static void main(String[] args) {
+        System.setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+        Count count = DebugAn.class.getAnnotation(Count.class);
+        System.out.println(count.count());
+    }
 }

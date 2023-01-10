@@ -13,7 +13,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package java8;
+package java8.lambda;
 
 import java.lang.annotation.*;
 import java.lang.reflect.Method;
